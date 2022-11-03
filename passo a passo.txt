@@ -1,0 +1,70 @@
+Usando NodeJS 17.2.0
+
+--criar package.json
+npm init -y
+
+--instalar typescript
+--npm i typescript -D
+
+--setup typescript
+--npx tsc --init
+
+--mudar no arquivo tsconfig o target para 2020
+
+--fastify - para criar rotas estilo express
+npm i fastify
+
+--para compilar typescript para javascript
+npx tsc
+
+--para automatizar compilacao typescript
+npm i tsx -D
+
+--Alterar package.json - o watch é para não precisar reiniar o servico sempre que alterar
+--basta alterar e já vai rodar o arquivo atualizado
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  }
+
+--para executar depois de configurar acima
+npm run dev
+
+--instalar extencao chamada Prisma
+
+--prisma para usar banco de dados - para facilitar a criacao de objetos
+npm i prisma -D
+
+--para conectar com o banco
+npm i @prisma/client
+
+--instalar o sql lite
+npx prisma init --datasource-provider SQLite
+
+--Para executar as migrations do prisma
+npx prisma migrate dev
+
+--Para visualizar o banco e seus objetos
+npx prisma studio
+
+--pacote para gerar DER(diagrama entidade relacionamento)
+npm i prisma-erd-generator @mermaid-js/mermaid-cli -D
+
+--para gerar o diagrama
+npx prisma generate
+
+--instalar o cors
+npm i @fastify/cors
+
+--executar o seed - arquivo que popula banco de dados
+--adicionar no package.json - "prisma": {  "seed": "tsx prisma/seed.ts" }
+-- e depois no terminal executar isso
+npx prisma db seed
+
+
+--biblioteca para validar schema
+npm i zod
+
+--biblioteca para gerar ids
+npm i short-unique-id
+
+
