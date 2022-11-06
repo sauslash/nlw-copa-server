@@ -68,3 +68,5 @@ npm i zod
 npm i short-unique-id
 
 
+--instalar o jwt para o fastify
+npm i @fastify/jwt
